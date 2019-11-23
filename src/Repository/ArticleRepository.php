@@ -47,4 +47,26 @@ class ArticleRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    // /**
+    //  * @return Article[] Returns an array of Article objects
+    //  */
+    // Reprendre
+    public function findAll(): ?Article
+    {
+        return $this->createQueryBuilder('a')
+        ;
+    }
+
+
+    // Reprendre ?
+    public function findOne($value): ?Article
+    {
+        return $this->createQueryBuilder('a')
+            ->setParameter('val', $value)
+            ->getQuery()
+            ->getOneOrNullResult()
+        ;
+    }
+    */
 }
