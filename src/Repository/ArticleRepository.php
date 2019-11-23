@@ -55,6 +55,8 @@ class ArticleRepository extends ServiceEntityRepository
     public function findAll(): ?Article
     {
         return $this->createQueryBuilder('a')
+            ->getQuery()
+            ->getResult()
         ;
     }
 
@@ -68,5 +70,4 @@ class ArticleRepository extends ServiceEntityRepository
             ->getOneOrNullResult()
         ;
     }
-    */
 }

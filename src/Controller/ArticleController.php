@@ -26,7 +26,7 @@ class ArticleController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="article_get", methods={"GET"})
+     * @Route("/article/{id}", name="article_detail", methods={"GET"})
      */
     public function getOne(Article $article): Response
     {
@@ -36,7 +36,7 @@ class ArticleController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="article_new", methods={"GET","POST"})
+     * @Route("/create", name="article_creation", methods={"GET","POST"})
      */
     public function create(Request $request): Response
     {
@@ -69,7 +69,7 @@ class ArticleController extends AbstractController
     // }
 
     /**
-     * @Route("/{id}/edit", name="article_edit", methods={"GET","POST"})
+     * @Route("/article/{id}/edit", name="article_edition", methods={"GET","POST"})
      */
     public function edit(Request $request, Article $article): Response
     {
@@ -89,7 +89,7 @@ class ArticleController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="article_delete", methods={"DELETE"})
+     * @Route("/article/delete/{id}", name="article_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Article $article): Response
     {
